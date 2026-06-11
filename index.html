@@ -7,6 +7,24 @@
 <link rel="stylesheet" href="styles.css">
 </head>
 
+<!-- CHAT BUTTON -->
+<button id="chatBtn" onclick="toggleChat()">🍫 Chat</button>
+
+<!-- CHAT BOX -->
+<div id="chatBox" class="chat-hidden">
+
+  <div class="chat-header">
+    <h3>🍫 Choco Agent</h3>
+    <span onclick="toggleChat()">✖</span>
+  </div>
+
+  <div id="messages"></div>
+
+  <input id="userInput" placeholder="Ask me about chocolate..." />
+  <button onclick="sendMessage()">Send</button>
+
+</div>
+
 <body>
 
 <header class="navbar">
