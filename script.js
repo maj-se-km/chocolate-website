@@ -1,3 +1,46 @@
+
+function toggleChat() {
+  const box = document.getElementById("chatBox");
+  box.classList.toggle("chat-hidden");
+}
+
+function sendMessage() {
+  const input = document.getElementById("userInput");
+  const messages = document.getElementById("messages");
+
+  const text = input.value;
+  if (!text) return;
+
+  messages.innerHTML += `<p><b>You:</b> ${text}</p>`;
+
+  const reply = getResponse(text);
+
+  messages.innerHTML += `<p><b>Agent:</b> ${reply}</p>`;
+
+  input.value = "";
+  messages.scrollTop = messages.scrollHeight;
+}
+
+// 🤖 YOUR LEVEL 1 AGENT BRAIN
+function getResponse(msg) {
+  msg = msg.toLowerCase();
+
+  if (msg.includes("hello")) return "Hi 🍫 I’m your chocolate assistant!";
+  if (msg.includes("buy")) return "Go to Products page to buy chocolates!";
+  if (msg.includes("price")) return "Our chocolates start at $5 🍫";
+  if (msg.includes("dark")) return "Dark chocolate is rich and premium 😍";
+
+  return "Ask me about chocolates, prices, or products 🍫";
+}
+
+
+
+
+
+
+
+
+
 // CART SYSTEM
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
