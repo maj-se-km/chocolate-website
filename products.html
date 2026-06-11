@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>ChocoLux | Products</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<header class="navbar">
+  <div class="logo">🍫 ChocoLux</div>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="products.html" class="active">Products</a>
+  </nav>
+
+  <div class="cart">
+    🛒 <span id="cartCount">0</span>
+  </div>
+</header>
+
+<section class="products-hero">
+  <h1>Our Chocolate Collection</h1>
+  <p>Tap to add your favorite chocolates to cart</p>
+</section>
+
+<section class="grid">
+
+  <div class="product reveal">
+    <img src="https://images.unsplash.com/photo-1548907040-4baa42d10919" />
+    <h3>Dark Bliss</h3>
+    <p>Rich 85% dark chocolate</p>
+    <button onclick="addToCart('Dark Bliss')">Add to Cart</button>
+  </div>
+
+  <div class="product reveal">
+    <img src="https://images.unsplash.com/photo-1511381939415-e44015466834" />
+    <h3>Milk Harmony</h3>
+    <p>Smooth creamy milk chocolate</p>
+    <button onclick="addToCart('Milk Harmony')">Add to Cart</button>
+  </div>
+
+  <div class="product reveal">
+    <img src="https://images.unsplash.com/photo-1541783245831-57d6fb0926d3" />
+    <h3>Nutty Delight</h3>
+    <p>Chocolate with roasted almonds</p>
+    <button onclick="addToCart('Nutty Delight')">Add to Cart</button>
+  </div>
+
+</section>
+
+<div id="toast"></div>
+
+<footer>
+  <p>© 2026 ChocoLux. Crafted with passion 🍫</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
